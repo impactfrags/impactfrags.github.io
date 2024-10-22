@@ -9682,3 +9682,13 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.separator {
+  border: 0;
+  height: 1px;
+  background: #FFBD39; 
+  margin: 40px 0; 
+  width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
+}
