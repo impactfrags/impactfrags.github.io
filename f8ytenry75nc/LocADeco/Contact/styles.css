@@ -178,6 +178,29 @@ nav ul li a:hover {
     text-align: left;
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #a28834; /* Couleur de fond pour correspondre au thème */
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Masqué au départ */
+    z-index: 1000; /* Pour s'assurer que le bouton reste au-dessus des autres éléments */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Animation */
+}
+
+.scroll-top:hover {
+    background-color: #8c7330; /* Couleur légèrement plus foncée au survol */
+}
+
+
 .social-icons {
     display: flex;
     gap: 15px; /* Espace entre les icônes */

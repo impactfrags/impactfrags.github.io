@@ -20,7 +20,25 @@
             </ul>
         </nav>
     </header>
-    
+    <div id="scrollToTop" class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.getElementById('scrollToTop');
+            if (window.scrollY > 200) {
+                scrollButton.style.display = 'block';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
     <section class="contact-section">
         <div class="contact-header">
             <h1>Loc A Deco</h1>
