@@ -1,0 +1,284 @@
+/* Font Faces */
+@font-face {
+    font-family: 'PoliceMariage';
+    src: url('../formal-script.bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PoliceDescription';
+    src: url('../Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: PoliceDescription, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.5) 20%, rgba(255, 218, 185, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+    background-color: #fff; /* Fond blanc par défaut */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur blanche légèrement transparente */
+    backdrop-filter: blur(10px); /* Effet de flou pour adoucir la transition */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a28834;
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner {
+    background-image: url('../image/Catalogue/testBanniere.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.catalogue {
+    width: 70%; /* Le catalogue occupe 70% de la largeur disponible */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espace entre les lignes d'articles */
+}
+
+.item {
+    text-align: center;
+    width: 32%; /* Chaque article prend environ un tiers de la largeur avec un espace */
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.item p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+.item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+    background-color: #0056b3;
+}
+
+.cart {
+    width: 25%; /* Le panier occupe 25% de la largeur disponible */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-height: 80vh; /* Limite la hauteur maximale du panier pour éviter de déborder */
+    overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la hauteur max */
+    box-sizing: border-box;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li {
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Permet le retour à la ligne pour les articles très longs */
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.createpdf {
+    padding: 10px 20px;
+    background-color: #ffffff; /* White color to stand out on the darker background */
+    color: #333; /* Matching the text color */
+    border: 2px solid #a28834; /* Border color to match the theme */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Space from the text */
+    font-weight: bold; /* Bold font for better visibility */
+}
+
+.createpdf:hover {
+    background-color: #a28834; /* On hover, switch to the theme's accent color */
+    color: white; /* White text on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text for contrast */
+    border-top: 1px solid #444; /* Slightly lighter border for subtle contrast */
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px; /* Taille de police confortable */
+    letter-spacing: 1px; /* Espacement léger entre les lettres pour un style raffiné */
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.quantity-container label {
+    margin-right: 10px;
+    font-size: 1em;
+    color: #666;
+}
+
+/* Supprimer les flèches du champ de type number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Pour Firefox */
+}
+
+/* Styles pour la sélection de quantité */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.quantity-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #0056b3;
+}
+
+.quantity-selector input {
+    width: 60px;
+    text-align: center;
+    border: none; /* Supprimer la bordure pour correspondre aux boutons */
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #007BFF; /* Même couleur que les boutons */
+    color: white;
+}
+
+.quantity-selector input:focus {
+    outline: none; /* Supprimer le contour bleu par défaut lors du focus */
+}
+
+.quantity-btn, .quantity-selector input {
+    background-color: #007BFF;
+    color: white;
+}
+

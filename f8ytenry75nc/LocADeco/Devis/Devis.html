@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Loc A Déco</title>
+    <link rel="stylesheet" href="Devis.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../image/Accueil/Logo.png" alt="Logo Loc A Déco">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Accueil/Accueil.html">Accueil</a></li>
+                <li><a href="../Catalogue/Catalogue.html">Catalogue</a></li>
+                <li><a href="../Contact/contact.html">Contact</a></li>
+                <li><a href="../Galerie/Galerie.html">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bande image avec texte -->
+    <section class="banner">
+        <div class="banner-text">
+            <h2>Bienvenue dans l'éditeur de Devis</h2>
+            <p>Découvrez notre sélection d'articles pour vos événements inoubliables.</p>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <section class="catalogue">
+            <!-- Première ligne de 3 articles -->
+            <div class="item-row">
+                <div class="item">
+                    <img src="../image/Catalogue/4-verres-de-cristal-a-vin-rouge-authentis-01-spiegelau.jpg" alt="Article 1">
+                    <h3>Article 1</h3>
+                    <p>50€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-1', -1, 'article-1', 'Article 1', 50)">-</button>
+                        <input type="number" id="quantity-article-1" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-1', 1, 'article-1', 'Article 1', 50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/chaise-blanche-en-resine.jpg" alt="Article 2">
+                    <h3>Article 2</h3>
+                    <p>75€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-2', -1, 'article-2', 'Article 2', 75)">-</button>
+                        <input type="number" id="quantity-article-2" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-2', 1, 'article-2', 'Article 2', 75)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/location-mange-debout-Annemasse.png" alt="Article 3">
+                    <h3>Article 3</h3>
+                    <p>100€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-3', -1, 'article-3', 'Article 3', 100)">-</button>
+                        <input type="number" id="quantity-article-3" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-3', 1, 'article-3', 'Article 3', 100)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deuxième ligne de 3 articles -->
+            <div class="item-row">
+                <div class="item">
+                    <img src="../image/Catalogue/4-verres-de-cristal-a-vin-rouge-authentis-01-spiegelau.jpg" alt="Article 4">
+                    <h3>Article 4</h3>
+                    <p>50€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', -1, 'article-4', 'Article 4', 50)">-</button>
+                        <input type="number" id="quantity-article-4" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', 1, 'article-4', 'Article 4', 50)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/chaise-blanche-en-resine.jpg" alt="Article 5">
+                    <h3>Article 5</h3>
+                    <p>75€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', -1, 'article-5', 'Article 5', 75)">-</button>
+                        <input type="number" id="quantity-article-5" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', 1, 'article-5', 'Article 5', 75)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/location-mange-debout-Annemasse.png" alt="Article 6">
+                    <h3>Article 6</h3>
+                    <p>100€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', -1, 'article-6', 'Article 6', 100)">-</button>
+                        <input type="number" id="quantity-article-6" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', 1, 'article-6', 'Article 6', 100)">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panier -->
+        <aside class="cart">
+            <h2>Votre Panier</h2>
+            <ul id="cart-items">
+                <!-- Les articles ajoutés au panier apparaîtront ici -->
+            </ul>
+            <p id="cart-total">Total: 0€</p>
+            <button class="createpdf" id="create-pdf">Créer le PDF du devis</button>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Loc A Déco. Tous droits réservés.</p>
+    </footer>
+    <script src="Devis.js"></script>
+</body>
+</html>

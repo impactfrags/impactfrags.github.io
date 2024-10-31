@@ -1,0 +1,252 @@
+/* Font Faces */
+@font-face {
+    font-family: 'PoliceMariage';
+    src: url('../formal-script.bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PoliceDescription';
+    src: url('../Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: PoliceDescription, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.5) 20%, rgba(255, 218, 185, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+    background-color: #fff; /* Fond blanc par défaut */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); /* Couleur blanche légèrement transparente */
+    backdrop-filter: blur(10px); /* Effet de flou pour adoucir la transition */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a28834;
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto; 
+}
+
+.banner {
+    background-image: url('../image/Catalogue/testBanniere.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative; /* Ensure the button can be positioned relatively to this block */
+    text-align: center; /* Center the text and button within */
+}
+
+.devis-button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* White color to stand out on the darker background */
+    color: #333; /* Matching the text color */
+    border: 2px solid #a28834; /* Border color to match the theme */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Space from the text */
+    font-weight: bold; /* Bold font for better visibility */
+}
+
+.devis-button:hover {
+    background-color: #a28834; /* On hover, switch to the theme's accent color */
+    color: white; /* White text on hover */
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.banner p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.catalogue {
+    width: 70%; /* Le catalogue occupe 70% de la largeur disponible */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espace entre les lignes d'articles */
+}
+
+.item {
+    text-align: center;
+    width: 32%; /* Chaque article prend environ un tiers de la largeur avec un espace */
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.item p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+}
+
+.item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+    background-color: #0056b3;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #a28834;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Masquer la bulle au départ */
+    z-index: 1000; /* S'assurer que l'élément est au-dessus des autres */
+    transition: opacity 0.3s ease-in-out; /* Animation d'apparition/disparition */
+}
+
+.scroll-top:hover {
+    background-color: #8c7330; /* Change la couleur au survol */
+}
+
+.quote-button {
+    text-align: center;
+    margin: 20px 0; /* Add some spacing */
+}
+
+.quote-button button {
+    padding: 15px 30px;
+    background-color: #28a745; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quote-button button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.sticky-devis-button {
+    display: none; /* Initially not displayed */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    background-color: #a28834; /* Theme's accent color */
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.sticky-devis-button:hover {
+    background-color: #8c7330; /* Darker shade on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* Larger and darker shadow on hover for more prominence */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text for contrast */
+    border-top: 1px solid #444; /* Slightly lighter border for subtle contrast */
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px; /* Taille de police confortable */
+    letter-spacing: 1px; /* Espacement léger entre les lettres pour un style raffiné */
+}
