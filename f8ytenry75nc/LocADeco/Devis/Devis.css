@@ -145,9 +145,9 @@ nav ul li a:hover {
 
 /* Boutons principaux harmonisés au thème */
 .quantity-btn, .quantity-selector input, .createpdf {
-    background-color: #bca465;
+    background-color: rgb(175, 148, 57);
     color: white;
-    border: 2px solid #bca465;
+    border: 2px solid rgb(175, 148, 57);
     padding: 10px 20px;
     font-size: 1.2em;
     border-radius: 5px;
@@ -156,7 +156,7 @@ nav ul li a:hover {
 }
 
 .quantity-btn:hover, .createpdf:hover {
-    background-color: #a28834;
+    background-color: #9c8332;
     color: #fff;
 }
 
@@ -179,11 +179,11 @@ nav ul li a:hover {
 .quantity-selector input {
     width: 60px;
     text-align: center;
-    border: 2px solid #bca465;
+    border: 2px solid rgb(175, 148, 57);
     margin: 0 10px;
     border-radius: 5px;
     padding: 10px;
-    background-color: #bca465;
+    background-color: rgb(175, 148, 57);
     color: white;
 }
 
