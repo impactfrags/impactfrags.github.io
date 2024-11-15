@@ -77,6 +77,7 @@ nav ul li a:hover {
 .Presentation {
     text-align: center;
     margin: 20px 0;
+    position: relative;
 }
 
 .Presentation img{
@@ -84,6 +85,25 @@ nav ul li a:hover {
     max-width: 400px; /* Ajuster la largeur de l'image */
     border-radius: 10px; /* Bords arrondis pour un look élégant */
     object-fit: cover;
+}
+
+.wave-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position waves and logo relative to this container */
+}
+
+.wave-left {
+    position: absolute;
+    left: 250px; /* Align to the left */
+    transform: rotate(-90deg);
+}
+
+.wave-right {
+    position: absolute;
+    right: 250px; /* Align to the right */
+    transform: rotate(90deg);
 }
 
 .Presentation p {
@@ -238,14 +258,14 @@ nav ul li a:hover {
     top: 50%; /* Centré verticalement par rapport à la grille */
     width: 100px; /* Largeur des serpentins */
     height: 200px; /* Hauteur des serpentins pour correspondre à la hauteur de la grille */
-    background: url('../test3-removebg.png') no-repeat center center / contain;
+    background: url('../waveSublimer.png') no-repeat center center / contain;
     opacity: 1; /* Opacité réglée pour une visibilité complète */
     z-index: -1; /* Assurez-vous qu'il se trouve derrière les éléments de grille */
     transform: translateY(-50%); /* Ajustement pour centrer verticalement */
 }
 
 .image-grid-wrapper::after {
-    background: url('../test3-removebg.png') no-repeat center center / contain;
+    background: url('../waveSublimer.png') no-repeat center center / contain;
 }
 
 .image-grid-wrapper::before {

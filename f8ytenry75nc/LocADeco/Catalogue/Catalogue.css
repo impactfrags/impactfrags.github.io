@@ -72,24 +72,23 @@ nav ul li a:hover {
     margin: 0 auto; 
 }
 
-.banner {
-    background-image: url('../image/Catalogue/testBanniere.png');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    color: white;
-    text-align: center;
-    width: 100%;
-    position: relative;
+.center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Optional: prevent content from touching edges */
+    text-align: center; /* Center the text inside the banner-text */
 }
 
 .banner-text {
-    background-color: rgba(0, 0, 0, 0.5);
-    display: inline-block;
+    color: #fff;
+    background-color: rgb(79, 79, 79);
     padding: 20px;
     border-radius: 10px;
     position: relative; /* Ensure the button can be positioned relatively to this block */
     text-align: center; /* Center the text and button within */
+    max-width: 70%; /* Optional: limit width on large screens */
+    margin: 0 auto;
 }
 
 .devis-button {
@@ -142,7 +141,16 @@ nav ul li a:hover {
     width: 100%;
     height: 300px;
     border-radius: 15px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.item .image-container {
+    width: 100%; /* Full width of the item */
+    aspect-ratio: 3 / 2; /* Maintain a fixed ratio, e.g., 3:2 */
+    overflow: hidden; /* Ensure overflow is hidden for images that are larger */
+    border-radius: 15px;
+    position: relative;
 }
 
 .item h3 {
@@ -249,4 +257,31 @@ footer p {
     margin: 10px 0;
     font-size: 16px; /* Taille de police confortable */
     letter-spacing: 1px; /* Espacement léger entre les lettres pour un style raffiné */
+}
+
+
+.main-logo{
+    Width: 40%;
+    max-width: 400px; /* Ajuster la largeur de l'image */
+    border-radius: 10px; /* Bords arrondis pour un look élégant */
+    object-fit: cover;
+}
+
+.wave-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position waves and logo relative to this container */
+}
+
+.wave-left {
+    position: absolute;
+    left: 250px; /* Align to the left */
+    transform: rotate(-90deg);
+}
+
+.wave-right {
+    position: absolute;
+    right: 250px; /* Align to the right */
+    transform: rotate(90deg);
 }
