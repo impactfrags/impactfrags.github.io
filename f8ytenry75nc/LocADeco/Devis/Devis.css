@@ -65,9 +65,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Banner */
 .banner {
-    background-image: url('../image/Catalogue/testBanniere.png');
+    background-image: url('../image/Catalogue/banner.webp');
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
@@ -82,17 +81,52 @@ nav ul li a:hover {
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
+    position: relative; /* Ensure the button can be positioned relatively to this block */
+    text-align: center; /* Center the text and button within */
 }
 
-.banner h2 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: bold;
+.main-logo{
+    Width: 40%;
+    max-width: 400px; /* Ajuster la largeur de l'image */
+    border-radius: 10px; /* Bords arrondis pour un look élégant */
+    object-fit: cover;
 }
 
-.banner p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
+.wave-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Position waves and logo relative to this container */
+}
+
+.wave-left {
+    position: absolute;
+    left: 250px; /* Align to the left */
+    transform: rotate(-90deg);
+}
+
+.wave-right {
+    position: absolute;
+    right: 250px; /* Align to the right */
+    transform: rotate(90deg);
+}
+
+.devis-button {
+    padding: 10px 20px;
+    background-color: #ffffff; /* White color to stand out on the darker background */
+    color: #333; /* Matching the text color */
+    border: 2px solid #a28834; /* Border color to match the theme */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Space from the text */
+    font-weight: bold; /* Bold font for better visibility */
+}
+
+.devis-button:hover {
+    background-color: #a28834; /* On hover, switch to the theme's accent color */
+    color: white; /* White text on hover */
 }
 
 /* Main Content Layout */
@@ -128,7 +162,8 @@ nav ul li a:hover {
     width: 100%;
     height: 300px;
     border-radius: 15px;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #fff;
 }
 
 .item h3 {

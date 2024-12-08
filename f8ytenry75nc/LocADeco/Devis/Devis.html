@@ -23,10 +23,18 @@
     </header>
 
     <!-- Bande image avec texte -->
+<!-- Bande image avec texte -->
+    <div class="wave-wrapper">
+        <img src="../waveSublimer.png" alt="Wave Left" class="wave wave-left" style="width: 90px;">
+        <img src="../image/Accueil/Logo.png" alt="Logo Loc A Déco" class="main-logo">
+        <img src="../waveSublimer.png" alt="Wave Right" class="wave wave-right" style="width: 90px;">
+    </div>
+    
     <section class="banner">
         <div class="banner-text">
-            <h2>Bienvenue dans l'éditeur de Devis</h2>
+            <h2>Bienvenue dans notre Catalogue</h2>
             <p>Découvrez notre sélection d'articles pour vos événements inoubliables.</p>
+            <button class="devis-button" id="bannerDevisButton">Je fais mon devis</button>
         </div>
     </section>
 
@@ -35,35 +43,36 @@
             <!-- Première ligne de 3 articles -->
             <div class="item-row">
                 <div class="item">
-                    <img src="../image/Catalogue/4-verres-de-cristal-a-vin-rouge-authentis-01-spiegelau.jpg" alt="Article 1">
-                    <h3>Article 1</h3>
-                    <p>50€</p>
+                    <img src="../image/Catalogue/chaise-blanche-en-resine.jpg" alt="Article 1">
+                    <h3>Chaise Miami</h3>
+                    <p>1,30€</p>
+                    <p>chaises empilables</p>
                     <div class="quantity-selector">
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-1', -1, 'article-1', 'Article 1', 50)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-1', -1, 'article-1', 'Chaise Miami', 1.30)">-</button>
                         <input type="number" id="quantity-article-1" name="quantity" value="0" min="0" readonly>
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-1', 1, 'article-1', 'Article 1', 50)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-1', 1, 'article-1', 'Chaise Miami', 1.30)">+</button>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="../image/Catalogue/chaise-blanche-en-resine.jpg" alt="Article 2">
-                    <h3>Article 2</h3>
-                    <p>75€</p>
+                    <img src="../image/Catalogue/Housse chaise resine.png" alt="Article 2" >
+                    <h3>Housse Blanche</h3>
+                    <p>1€</p>
                     <div class="quantity-selector">
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-2', -1, 'article-2', 'Article 2', 75)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-2', -1, 'article-2', 'Housse Blanche', 1)">-</button>
                         <input type="number" id="quantity-article-2" name="quantity" value="0" min="0" readonly>
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-2', 1, 'article-2', 'Article 2', 75)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-2', 1, 'article-2', 'Housse Blanche', 1)">+</button>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="../image/Catalogue/location-mange-debout-Annemasse.png" alt="Article 3">
-                    <h3>Article 3</h3>
-                    <p>100€</p>
+                    <img src="../image/Catalogue/Lot chaise resine et housse.png" alt="Article 3">
+                    <h3>Lot Chaise Miami et Housse blanche</h3>
+                    <p>2€</p>
                     <div class="quantity-selector">
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-3', -1, 'article-3', 'Article 3', 100)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-3', -1, 'article-3', 'Lot Chaise Miami et Housse blanche', 2)">-</button>
                         <input type="number" id="quantity-article-3" name="quantity" value="0" min="0" readonly>
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-3', 1, 'article-3', 'Article 3', 100)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-3', 1, 'article-3', 'Lot Chaise Miami et Housse blanche', 2)">+</button>
                     </div>
                 </div>
             </div>
@@ -71,35 +80,150 @@
             <!-- Deuxième ligne de 3 articles -->
             <div class="item-row">
                 <div class="item">
-                    <img src="../image/Catalogue/4-verres-de-cristal-a-vin-rouge-authentis-01-spiegelau.jpg" alt="Article 4">
-                    <h3>Article 4</h3>
-                    <p>50€</p>
+                    <img src="../image/Catalogue/Mange debout.png" alt="Article 1">
+                    <h3>Manges-debout</h3>
+                    <p>7€</p>
+                    <p>Pliable, Diamètre du plateau 80cm Hauteur 1,10m</p>
                     <div class="quantity-selector">
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', -1, 'article-4', 'Article 4', 50)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', -1, 'article-4', 'Manges-debout', 7)">-</button>
                         <input type="number" id="quantity-article-4" name="quantity" value="0" min="0" readonly>
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', 1, 'article-4', 'Article 4', 50)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', 1, 'article-4', 'Manges-debout', 7)">+</button>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="../image/Catalogue/chaise-blanche-en-resine.jpg" alt="Article 5">
-                    <h3>Article 5</h3>
-                    <p>75€</p>
+                    <img src="../image/Catalogue/Housse mange debout.png" alt="Article 2">
+                    <h3>Housse blanche ou noire pour Manges-debout</h3>
+                    <p>4€</p>
                     <div class="quantity-selector">
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', -1, 'article-5', 'Article 5', 75)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', -1, 'article-5', 'Housse blanche ou noire pour Manges-debout', 4)">-</button>
                         <input type="number" id="quantity-article-5" name="quantity" value="0" min="0" readonly>
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', 1, 'article-5', 'Article 5', 75)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', 1, 'article-5', 'Housse blanche ou noire pour Manges-debout', 4)">+</button>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="../image/Catalogue/location-mange-debout-Annemasse.png" alt="Article 6">
-                    <h3>Article 6</h3>
-                    <p>100€</p>
+                    <img src="../image/Catalogue/Lot mange debout et housse.png" alt="Article 3">
+                    <h3>Lot Manges-debout et Housse blanche/noire</h3>
+                    <p>10€</p>
                     <div class="quantity-selector">
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', -1, 'article-6', 'Article 6', 100)">-</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', -1, 'article-6', 'Lot Manges-debout et Housse blanche/noire', 10)">-</button>
                         <input type="number" id="quantity-article-6" name="quantity" value="0" min="0" readonly>
-                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', 1, 'article-6', 'Article 6', 100)">+</button>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', 1, 'article-6', 'Lot Manges-debout et Housse blanche/noire', 10)">+</button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- troisième ligne de 3 articles -->
+             <div class="item-row">
+                <div class="item">
+                    <img src="../image/Catalogue/Table rectangulaire.png" alt="Article 4">
+                    <h3>Table rectangulaire</h3>
+                    <p>7€</p>
+                    <p>Table pliable, H 74,5cm L 1,89cm l 75cm</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', -1, 'article-4', 'Table rectangulaire', 7)">-</button>
+                        <input type="number" id="quantity-article-4" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', 1, 'article-4', 'Table rectangulaire', 7)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/Nappe tissu table rectangulaire.png" alt="Article 2">
+                    <h3>Nappe blanche en tissu</h3>
+                    <p>15€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', -1, 'article-5', 'Nappe blanche en tissu Table rectangulaire', 15)">-</button>
+                        <input type="number" id="quantity-article-5" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', 1, 'article-5', 'Nappe blanche en tissu Table rectangulaire', 15)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/Lot table rectangulaire et nappe tissu.png" alt="Article 3">
+                    <h3>Lot Table rectangulaire et nappe blanche en tissu</h3>
+                    <p>20€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', -1, 'article-6', 'Lot Table rectangulaire et nappe blanche en tissu', 20)">-</button>
+                        <input type="number" id="quantity-article-6" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', 1, 'article-6', 'Lot Table rectangulaire et nappe blanche en tissu', 20)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quatrième ligne de 3 articles -->
+            <div class="item-row">
+                <div class="item">
+                    <img src="../image/Catalogue/Table ronde.png" alt="Article 4">
+                    <h3>Table ronde</h3>
+                    <p>11€</p>
+                    <p>Table pliable, H74,5 cm diamètre 1,78m</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', -1, 'article-4', 'Table ronde', 11)">-</button>
+                        <input type="number" id="quantity-article-4" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', 1, 'article-4', 'Table ronde', 11)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/Nappe tissu table ronde.png" alt="Article 2">
+                    <h3>Nappe blanche en tissu</h3>
+                    <p>25€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', -1, 'article-5', 'Nappe blanche en tissu Table ronde', 25)">-</button>
+                        <input type="number" id="quantity-article-5" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', 1, 'article-5', 'Nappe blanche en tissu Table ronde', 25)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/Lot table ronde et nappe tissu.png" alt="Article 3">
+                    <h3>Lot Table ronde et nappe blanche en tissu</h3>
+                    <p>30€</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', -1, 'article-6', 'Lot Table ronde et nappe blanche en tissu', 30)">-</button>
+                        <input type="number" id="quantity-article-6" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', 1, 'article-6', 'Lot Table ronde et nappe blanche en tissu', 30)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cinquième ligne de 3 articles -->
+            <div class="item-row">
+                <div class="item">
+                    <img src="../image/Catalogue/CandyBar.png" alt="Article 4">
+                    <h3>Candy bar en bois</h3>
+                    <p>72€</p>
+                    <p>Avec pots en verres et accessoires bonbons</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', -1, 'article-4', 'Candy bar en bois', 72)">-</button>
+                        <input type="number" id="quantity-article-4" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-4', 1, 'article-4', 'Candy bar en bois', 72)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/Arche oval or.png" alt="Article 2">
+                    <h3>Arche oval or</h3>
+                    <p>30€</p>
+                    <p></p>
+                    <p>Démontable, 3m de diamètre, sur pied</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', -1, 'article-5', 'Arche oval or', 30)">-</button>
+                        <input type="number" id="quantity-article-5" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-5', 1, 'article-5', 'Arche oval or', 30)">+</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="../image/Catalogue/Arche rectangulaire.png" alt="Article 3">
+                    <h3>Arche rectangulaire</h3>
+                    <p>40€</p>
+                    <p>Hauteur 3m, Longueur 3m ou 6m, peut-être diviser en 2</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', -1, 'article-6', 'Arche rectangulaire', 40)">-</button>
+                        <input type="number" id="quantity-article-6" name="quantity" value="0" min="0" readonly>
+                        <button class="quantity-btn" onclick="changeQuantity('quantity-article-6', 1, 'article-6', 'Arche rectangulaire', 40)">+</button>
                     </div>
                 </div>
             </div>

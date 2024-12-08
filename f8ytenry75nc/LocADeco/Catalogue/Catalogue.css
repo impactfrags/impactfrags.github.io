@@ -80,15 +80,24 @@ nav ul li a:hover {
     text-align: center; /* Center the text inside the banner-text */
 }
 
+.banner {
+    background-image: url('../image/Catalogue/banner.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
 .banner-text {
-    color: #fff;
-    background-color: rgb(79, 79, 79);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
     padding: 20px;
     border-radius: 10px;
     position: relative; /* Ensure the button can be positioned relatively to this block */
     text-align: center; /* Center the text and button within */
-    max-width: 70%; /* Optional: limit width on large screens */
-    margin: 0 auto;
 }
 
 .devis-button {
