@@ -25,7 +25,6 @@ body {
     background-color: #fff;
 }
 
-/* Header and Navigation */
 header {
     display: flex;
     justify-content: center;
@@ -81,26 +80,26 @@ nav ul li a:hover {
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
-    position: relative; /* Ensure the button can be positioned relatively to this block */
-    text-align: center; /* Center the text and button within */
+    position: relative;
+    text-align: center;
 }
 
 .devis-button {
     padding: 10px 20px;
-    background-color: #ffffff; /* White color to stand out on the darker background */
-    color: #333; /* Matching the text color */
-    border: 2px solid #a28834; /* Border color to match the theme */
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #a28834;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-    margin-top: 20px; /* Space from the text */
-    font-weight: bold; /* Bold font for better visibility */
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 .devis-button:hover {
-    background-color: #a28834; /* On hover, switch to the theme's accent color */
-    color: white; /* White text on hover */
+    background-color: #a28834;
+    color: white;
 }
 
 /* Main Content Layout */
@@ -114,35 +113,33 @@ nav ul li a:hover {
     position: relative;
 }
 
-/* Catalogue Section */
 .catalogue {
     width: 70%;
     padding: 20px;
-    margin: 0 auto;
 }
 
-/* Make rows wrap to handle responsiveness */
 .item-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;          /* allow wrapping for responsiveness */
     justify-content: space-between;
-    align-items: stretch; /* Keep items equal height if possible */
+    align-items: stretch;
     margin-bottom: 20px;
 }
 
-/* Each item is a flex column so quantity selector stays at bottom */
+/* Make each item a flex column so quantity is at bottom. 
+   Use ~32% so you can fit 3 items across on large screens. */
 .item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     width: 32%;
-    margin-bottom: 20px; /* for spacing if it wraps */
+    margin-bottom: 20px; /* spacing if row wraps */
 }
 
 .item img {
     width: 100%;
-    height: auto; /* Let the image be fluid for responsiveness */
+    height: auto;  /* fluid images for responsiveness */
     border-radius: 15px;
     object-fit: contain;
     background-color: #fff;
@@ -160,7 +157,7 @@ nav ul li a:hover {
     margin: 0;
 }
 
-/* Boutons principaux */
+/* Quantity and PDF buttons */
 .quantity-btn, .quantity-selector input, .createpdf {
     background-color: rgb(175, 148, 57);
     color: white;
@@ -178,7 +175,7 @@ nav ul li a:hover {
 }
 
 .quantity-btn {
-    width: 40px; /* uniform button size */
+    width: 40px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -187,7 +184,6 @@ nav ul li a:hover {
     padding: 0;
 }
 
-/* Bouton PDF */
 .createpdf {
     width: 100%;
     text-align: center;
@@ -195,7 +191,6 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* Boutons de sélection de quantité */
 .quantity-selector {
     display: flex;
     align-items: center;
@@ -218,7 +213,7 @@ nav ul li a:hover {
     outline: none;
 }
 
-/* Panier */
+/* Cart */
 .cart {
     width: 25%;
     padding: 20px;
@@ -274,29 +269,34 @@ footer p {
     letter-spacing: 1px;
 }
 
-/* ============ Responsive Breakpoints ============ */
+/*=============================
+   RESPONSIVE BREAKPOINTS
+ =============================*/
 
-/* Medium screens (e.g. tablets): reduce item width to ~2 per row */
+/* 
+   3 items per row on large screens (default).
+   On mid‐size screens, let's do 2 items per row, 
+   and stack the cart under the items.
+*/
 @media (max-width: 992px) {
-    .item {
-        width: 48%;
-    }
-    .catalogue {
-        width: 100%;
-    }
     .main-content {
-        flex-direction: column; /* Stack catalogue & cart */
-        align-items: center;
+        flex-direction: column;      /* Stack catalogue & cart vertically */
+        align-items: center;         /* Center them */
     }
-    .cart {
-        width: 100%;
-        margin-top: 20px;
+
+    .catalogue, .cart {
+        width: 100%;                /* Full width each when stacked */
+        margin: 0 0 20px 0;         /* Spacing between sections */
+    }
+
+    .item {
+        width: 48%;                 /* 2 columns of items on mid screens */
     }
 }
 
-/* Small screens (phones): one item per row */
+/* On small screens (phones), 1 item per row */
 @media (max-width: 576px) {
     .item {
-        width: 100%;
+        width: 100%;                /* 1 item wide */
     }
 }
