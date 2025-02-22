@@ -139,7 +139,7 @@ nav ul li a:hover {
 
 .item img {
     width: 100%;
-    height: auto;  /* fluid images for responsiveness */
+    height: 300px;  /* fluid images for responsiveness */
     border-radius: 15px;
     object-fit: contain;
     background-color: #fff;
