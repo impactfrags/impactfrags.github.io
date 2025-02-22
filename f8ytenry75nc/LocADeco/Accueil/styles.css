@@ -351,7 +351,7 @@ nav ul li a:hover {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #333; /* Dark background color */
     color: #fff; /* White text for contrast */
     border-top: 1px solid #444; /* Slightly lighter border for subtle contrast */

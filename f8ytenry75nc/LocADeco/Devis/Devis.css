@@ -17,6 +17,7 @@
 
 /* Global Styles */
 body {
+    /*overflow-x: hidden;*/
     font-family: PoliceDescription, sans-serif;
     margin: 0;
     padding: 0;
@@ -285,7 +286,7 @@ input[type=number] {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #333;
     color: #fff;
     border-top: 1px solid #444;

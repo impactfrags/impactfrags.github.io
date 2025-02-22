@@ -243,7 +243,7 @@ nav ul li a:hover {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #333; /* Dark background color */
     color: #fff; /* White text for contrast */
     border-top: 1px solid #444; /* Slightly lighter border for subtle contrast */
@@ -257,29 +257,4 @@ footer p {
     letter-spacing: 1px; /* Espacement léger entre les lettres pour un style raffiné */
 }
 
-/*=============================
-   RESPONSIVE BREAKPOINTS
- =============================*/
 
-/* 
-   3 items per row on large screens (default).
-   On mid‐size screens, let's do 2 items per row, 
-   and stack the cart under the items.
-*/
-@media (max-width: 992px) {
-    .main-content {
-        flex-direction: column;      /* Stack catalogue & cart vertically */
-        align-items: center;         /* Center them */
-    }
-
-    .item {
-        width: 48%;                 /* 2 columns of items on mid screens */
-    }
-}
-
-/* On small screens (phones), 1 item per row */
-@media (max-width: 576px) {
-    .item {
-        width: 100%;                /* 1 item wide */
-    }
-}

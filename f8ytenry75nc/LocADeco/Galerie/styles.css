@@ -134,7 +134,7 @@ nav ul li a:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #333; /* Fond sombre pour le pied de page */
     color: #fff; /* Texte blanc pour contraste */
     border-top: 1px solid #444; /* Bordure légèrement plus claire pour subtilité */
