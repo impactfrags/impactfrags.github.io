@@ -121,24 +121,28 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+/* Make rows wrap to handle responsiveness */
 .item-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch; /* Ensures all .item divs in the row have the same height as the tallest one */
+    align-items: stretch; /* Keep items equal height if possible */
     margin-bottom: 20px;
 }
 
+/* Each item is a flex column so quantity selector stays at bottom */
 .item {
-    display: flex;            /* Turn on flex for each item */
-    flex-direction: column;   /* Stack content vertically */
-    justify-content: space-between; /* Spread out content so the last element sticks to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     width: 32%;
+    margin-bottom: 20px; /* for spacing if it wraps */
 }
 
 .item img {
     width: 100%;
-    height: 300px;
+    height: auto; /* Let the image be fluid for responsiveness */
     border-radius: 15px;
     object-fit: contain;
     background-color: #fff;
@@ -156,7 +160,7 @@ nav ul li a:hover {
     margin: 0;
 }
 
-/* Boutons principaux harmonisés au thème */
+/* Boutons principaux */
 .quantity-btn, .quantity-selector input, .createpdf {
     background-color: rgb(175, 148, 57);
     color: white;
@@ -174,7 +178,7 @@ nav ul li a:hover {
 }
 
 .quantity-btn {
-    width: 40px; /* Assurer une taille uniforme pour les boutons */
+    width: 40px; /* uniform button size */
     height: 40px;
     display: flex;
     justify-content: center;
@@ -242,7 +246,7 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* Suppression des flèches dans les champs de type number */
+/* Remove number input spinners */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -268,4 +272,31 @@ footer p {
     margin: 10px 0;
     font-size: 16px;
     letter-spacing: 1px;
+}
+
+/* ============ Responsive Breakpoints ============ */
+
+/* Medium screens (e.g. tablets): reduce item width to ~2 per row */
+@media (max-width: 992px) {
+    .item {
+        width: 48%;
+    }
+    .catalogue {
+        width: 100%;
+    }
+    .main-content {
+        flex-direction: column; /* Stack catalogue & cart */
+        align-items: center;
+    }
+    .cart {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Small screens (phones): one item per row */
+@media (max-width: 576px) {
+    .item {
+        width: 100%;
+    }
 }
