@@ -68,11 +68,18 @@ nav ul li a:hover {
     background-image: url('../image/Catalogue/banner.webp');
     background-size: cover;
     background-position: center;
-    padding: 100px 20px;
     color: white;
     text-align: center;
     width: 100%;
     position: relative;
+
+    /* On remplace "padding: 100px 20px" par une hauteur fixe */
+    height: 400px; /* Choisis la même hauteur que sur PC */
+    
+    /* Permet de centrer le texte verticalement dans la bannière */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-text {
@@ -139,7 +146,7 @@ nav ul li a:hover {
 
 .item img {
     width: 100%;
-    height: 300px;  /* fluid images for responsiveness */
+    height: 300px;
     border-radius: 15px;
     object-fit: contain;
     background-color: #fff;
@@ -241,6 +248,28 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #a28834;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Masquer la bulle au départ */
+    z-index: 1000; /* S'assurer que l'élément est au-dessus des autres */
+    transition: opacity 0.3s ease-in-out; /* Animation d'apparition/disparition */
+}
+
+.scroll-top:hover {
+    background-color: #8c7330; /* Change la couleur au survol */
+}
+
 /* Remove number input spinners */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -251,6 +280,7 @@ input[type=number]::-webkit-outer-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
 
 /* Footer */
 footer {
@@ -292,17 +322,11 @@ footer p {
     .item {
         width: 48%;                 /* 2 columns of items on mid screens */
     }
-    .item img {
-        height: 300px;
-    }
 }
 
 /* On small screens (phones), 1 item per row */
 @media (max-width: 576px) {
     .item {
         width: 100%;                /* 1 item wide */
-    }
-    .item img {
-        height: 300px;
     }
 }
