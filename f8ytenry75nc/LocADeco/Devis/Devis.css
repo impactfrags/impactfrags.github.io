@@ -292,11 +292,17 @@ footer p {
     .item {
         width: 48%;                 /* 2 columns of items on mid screens */
     }
+    .item img {
+        height: 300px;
+    }
 }
 
 /* On small screens (phones), 1 item per row */
 @media (max-width: 576px) {
     .item {
         width: 100%;                /* 1 item wide */
+    }
+    .item img {
+        height: 300px;
     }
 }
