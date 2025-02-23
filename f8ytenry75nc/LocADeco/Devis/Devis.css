@@ -157,12 +157,14 @@ nav ul li a:hover {
     margin: 10px 0 5px;
     font-size: 1.2em;
     color: #333;
+    white-space: normal;
 }
 
 .item p {
     font-size: 1em;
     color: #666;
     margin: 0;
+    white-space: normal;
 }
 
 /* Quantity and PDF buttons */
