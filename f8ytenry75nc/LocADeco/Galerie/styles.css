@@ -22,8 +22,9 @@ body {
     padding: 0;
     color: #333;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 218, 185, 0.8) 20%, rgba(255, 218, 185, 0.7) 100%),
-            linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.6) 10%, rgba(255, 218, 185, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
-    background-color: #fff; /* Fond blanc par défaut */
+        linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.6) 10%, rgba(255, 218, 185, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+    background-color: #fff;
+    /* Fond blanc par défaut */
 }
 
 /* Header and Navigation */
@@ -32,13 +33,16 @@ header {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur blanche légèrement transparente */
-    backdrop-filter: blur(10px); /* Effet de flou */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Couleur blanche légèrement transparente */
+    backdrop-filter: blur(10px);
+    /* Effet de flou */
     transition: background-color 0.3s ease-in-out;
 }
 
 header.scrolled {
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur du menu lors du défilement */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Couleur du menu lors du défilement */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -70,13 +74,15 @@ nav ul li a:hover {
 .galerie {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f6e5e4; /* Même couleur douce que sur la page d'accueil */
+    background-color: #f6e5e4;
+    /* Même couleur douce que sur la page d'accueil */
 }
 
 .galerie h1 {
     font-family: 'PoliceMariage', Arial, sans-serif;
     font-size: 3em;
-    color: #a28834; /* Couleur assortie au style du site */
+    color: #a28834;
+    /* Couleur assortie au style du site */
     margin-bottom: 20px;
 }
 
@@ -90,7 +96,8 @@ nav ul li a:hover {
 /* Grille d'images */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajustement des colonnes selon la taille de l'écran */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Ajustement des colonnes selon la taille de l'écran */
     gap: 20px;
 }
 
@@ -98,19 +105,23 @@ nav ul li a:hover {
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    aspect-ratio: 1 / 1; /* Propriété pour forcer un ratio carré */
+    aspect-ratio: 1 / 1;
+    /* Propriété pour forcer un ratio carré */
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* L'image remplit le conteneur tout en gardant le ratio */
+    object-fit: cover;
+    /* L'image remplit le conteneur tout en gardant le ratio */
     border-radius: 15px;
-    transition: transform 0.3s ease-in-out; /* Zoom au survol */
+    transition: transform 0.3s ease-in-out;
+    /* Zoom au survol */
 }
 
 .image-container:hover img {
-    transform: scale(1.1); /* Zoom léger au survol */
+    transform: scale(1.1);
+    /* Zoom léger au survol */
 }
 
 .description {
@@ -118,7 +129,8 @@ nav ul li a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fond noir transparent */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fond noir transparent */
     color: white;
     padding: 10px;
     text-align: center;
@@ -135,16 +147,20 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333; /* Fond sombre pour le pied de page */
-    color: #fff; /* Texte blanc pour contraste */
-    border-top: 1px solid #444; /* Bordure légèrement plus claire pour subtilité */
+    background-color: #333;
+    /* Fond sombre pour le pied de page */
+    color: #fff;
+    /* Texte blanc pour contraste */
+    border-top: 1px solid #444;
+    /* Bordure légèrement plus claire pour subtilité */
     width: 100%;
     margin-top: auto;
 }
 
 footer p {
     margin: 10px 0;
-    font-size: 16px; /* Taille de police confortable */
-    letter-spacing: 1px; /* Espacement léger pour un style raffiné */
+    font-size: 16px;
+    /* Taille de police confortable */
+    letter-spacing: 1px;
+    /* Espacement léger pour un style raffiné */
 }
-

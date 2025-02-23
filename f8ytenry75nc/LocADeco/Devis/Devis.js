@@ -58,7 +58,7 @@ function displayCart() {
 function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    
+
     doc.addImage('https://www.portfoliomeryet.top/f8ytenry75nc/LocADeco/image/Accueil/Logo.png', 'PNG', 10, 10, 40, 0);
 
     doc.setFontSize(18);
@@ -75,10 +75,10 @@ function generatePDF() {
     for (let articleId in cart) {
         const article = cart[articleId];
         doc.text(
-          `${article.name} - ${article.quantity} x ${article.price}€ = ` +
-          `${(article.quantity * article.price).toFixed(2)}€`,
-          10,
-          y
+            `${article.name} - ${article.quantity} x ${article.price}€ = ` +
+            `${(article.quantity * article.price).toFixed(2)}€`,
+            10,
+            y
         );
         y += 10;
         total += article.quantity * article.price;

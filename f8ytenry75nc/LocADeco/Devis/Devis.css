@@ -74,8 +74,9 @@ nav ul li a:hover {
     width: 100%;
     position: relative;
 
-    height: 400px; /* Choisis la même hauteur que sur PC */
-    
+    height: 400px;
+    /* Choisis la même hauteur que sur PC */
+
     /* Permet de centrer le texte verticalement dans la bannière */
     display: flex;
     align-items: center;
@@ -105,13 +106,15 @@ nav ul li a:hover {
 
 .catalogue {
     display: flex;
-    flex-wrap: wrap;          /* Let items wrap to new line */
-    justify-content: space-between; /* Spread them out, or flex-start/center as you prefer */
+    flex-wrap: wrap;
+    /* Let items wrap to new line */
+    justify-content: space-between;
+    /* Spread them out, or flex-start/center as you prefer */
     width: 70%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
+}
 
 .item {
     display: flex;
@@ -119,7 +122,8 @@ nav ul li a:hover {
     justify-content: space-between;
     text-align: center;
     width: 32%;
-    margin-bottom: 20px; /* spacing if row wraps */
+    margin-bottom: 20px;
+    /* spacing if row wraps */
 }
 
 .item img {
@@ -145,11 +149,13 @@ nav ul li a:hover {
     font-size: 1em;
     color: #666;
     margin: 0;
-    white-space: normal;    
+    white-space: normal;
 }
 
 /* Quantity and PDF buttons */
-.quantity-btn, .quantity-selector input, .createpdf {
+.quantity-btn,
+.quantity-selector input,
+.createpdf {
     background-color: rgb(175, 148, 57);
     color: white;
     border: 2px solid rgb(175, 148, 57);
@@ -160,7 +166,8 @@ nav ul li a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.quantity-btn:hover, .createpdf:hover {
+.quantity-btn:hover,
+.createpdf:hover {
     background-color: #9c8332;
     color: #fff;
 }
@@ -218,7 +225,7 @@ nav ul li a:hover {
     gap: 50px;
 }
 
-.cart h2{
+.cart h2 {
     text-align: center;
 }
 
@@ -253,13 +260,17 @@ nav ul li a:hover {
     line-height: 50px;
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Masquer la bulle au départ */
-    z-index: 1000; /* S'assurer que l'élément est au-dessus des autres */
-    transition: opacity 0.3s ease-in-out; /* Animation d'apparition/disparition */
+    display: none;
+    /* Masquer la bulle au départ */
+    z-index: 1000;
+    /* S'assurer que l'élément est au-dessus des autres */
+    transition: opacity 0.3s ease-in-out;
+    /* Animation d'apparition/disparition */
 }
 
 .scroll-top:hover {
-    background-color: #8c7330; /* Change la couleur au survol */
+    background-color: #8c7330;
+    /* Change la couleur au survol */
 }
 
 /* Remove number input spinners */
@@ -302,17 +313,23 @@ footer p {
 */
 @media (max-width: 992px) {
     .main-content {
-        flex-direction: column;      /* Stack catalogue & cart vertically */
-        align-items: center;         /* Center them */
+        flex-direction: column;
+        /* Stack catalogue & cart vertically */
+        align-items: center;
+        /* Center them */
     }
 
     .item {
-        width: 48%;                /* 1 item wide */
+        width: 48%;
+        /* 1 item wide */
     }
 
-    .catalogue, .cart {
-        width: 100%;                /* Full width each when stacked */
-        margin: 0 0 20px 0;         /* Spacing between sections */
+    .catalogue,
+    .cart {
+        width: 100%;
+        /* Full width each when stacked */
+        margin: 0 0 20px 0;
+        /* Spacing between sections */
     }
 
     .cart {
@@ -320,26 +337,27 @@ footer p {
         margin: 0 0 20px 0;
     }
 
-    .catalogue{
+    .catalogue {
         width: 80%;
         margin: 0 0 20px 0;
     }
 
-    .item p, .cart p, .cart ul { 
+    .item p,
+    .cart p,
+    .cart ul {
         white-space: normal;
         overflow-wrap: break-word;
     }
 
     body {
         background: linear-gradient(to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 218, 185, 0.5) 5%,
-          rgba(255, 218, 185, 0.5) 95%,
-          rgba(255, 255, 255, 0) 100%
-        );
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
     }
 
-    .banner{
+    .banner {
         height: 350px;
     }
 }
@@ -348,12 +366,15 @@ footer p {
 @media (max-width: 576px) {
 
     .main-content {
-        flex-direction: column;      /* Stack catalogue & cart vertically */
-        align-items: center;         /* Center them */
+        flex-direction: column;
+        /* Stack catalogue & cart vertically */
+        align-items: center;
+        /* Center them */
     }
 
     .item {
-        width: 100%;                /* 1 item wide */
+        width: 100%;
+        /* 1 item wide */
     }
 
     .cart {
@@ -361,26 +382,27 @@ footer p {
         margin: 0 0 20px 0;
     }
 
-    .catalogue{
+    .catalogue {
         width: 80%;
         margin: 0 0 20px 0;
     }
 
-    .item p, .cart p, .cart ul { 
+    .item p,
+    .cart p,
+    .cart ul {
         white-space: normal;
         overflow-wrap: break-word;
     }
 
     body {
         background: linear-gradient(to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 218, 185, 0.5) 5%,
-          rgba(255, 218, 185, 0.5) 95%,
-          rgba(255, 255, 255, 0) 100%
-        );
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
     }
 
-    .banner{
+    .banner {
         height: 350px;
     }
 
@@ -390,17 +412,21 @@ footer p {
 
     header {
         justify-content: flex-start;
-        padding: 10px 0;  /* minimal left/right padding */
+        padding: 10px 0;
+        /* minimal left/right padding */
     }
 
     nav ul {
-        flex-wrap: wrap;     /* ADJUSTED: now it wraps onto next line if needed */
-        gap: 10px;             /* keep or adjust spacing */
+        flex-wrap: wrap;
+        /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;
+        /* keep or adjust spacing */
         justify-content: flex-start;
     }
-    
+
     nav {
-        margin-left: 10px;   /* Space between logo and menu if needed */
+        margin-left: 10px;
+        /* Space between logo and menu if needed */
     }
-        
+
 }

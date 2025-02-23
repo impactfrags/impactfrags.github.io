@@ -21,7 +21,8 @@ body {
     padding: 0;
     color: #333;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.5) 20%, rgba(255, 218, 185, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
-    background-color: #fff; /* Fond blanc par défaut */
+    background-color: #fff;
+    /* Fond blanc par défaut */
 }
 
 header {
@@ -30,8 +31,10 @@ header {
     align-items: center;
     padding: 10px 20px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.8); /* Couleur blanche légèrement transparente */
-    backdrop-filter: blur(10px); /* Effet de flou pour adoucir la transition */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Couleur blanche légèrement transparente */
+    backdrop-filter: blur(10px);
+    /* Effet de flou pour adoucir la transition */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -75,10 +78,14 @@ nav ul li a:hover {
 
 .center-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 20px; /* Optional: prevent content from touching edges */
-    text-align: center; /* Center the text inside the banner-text */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    padding: 20px;
+    /* Optional: prevent content from touching edges */
+    text-align: center;
+    /* Center the text inside the banner-text */
 }
 
 .banner {
@@ -90,8 +97,9 @@ nav ul li a:hover {
     width: 100%;
     position: relative;
 
-    height: 400px; /* Choisis la même hauteur que sur PC */
-    
+    height: 400px;
+    /* Choisis la même hauteur que sur PC */
+
     /* Permet de centrer le texte verticalement dans la bannière */
     display: flex;
     align-items: center;
@@ -106,36 +114,46 @@ nav ul li a:hover {
     border-radius: 10px;
     position: relative;
     text-align: center;
-    
+
 }
 
 .devis-button {
     padding: 10px 20px;
-    background-color: #ffffff; /* White color to stand out on the darker background */
-    color: #333; /* Matching the text color */
-    border: 2px solid #a28834; /* Border color to match the theme */
+    background-color: #ffffff;
+    /* White color to stand out on the darker background */
+    color: #333;
+    /* Matching the text color */
+    border: 2px solid #a28834;
+    /* Border color to match the theme */
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-    margin-top: 20px; /* Space from the text */
-    font-weight: bold; /* Bold font for better visibility */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effects */
+    margin-top: 20px;
+    /* Space from the text */
+    font-weight: bold;
+    /* Bold font for better visibility */
 }
 
 .devis-button:hover {
-    background-color: #a28834; /* On hover, switch to the theme's accent color */
-    color: white; /* White text on hover */
+    background-color: #a28834;
+    /* On hover, switch to the theme's accent color */
+    color: white;
+    /* White text on hover */
 }
 
 .catalogue {
     display: flex;
-    flex-wrap: wrap;          /* Let items wrap to new line */
-    justify-content: space-between; /* Spread them out, or flex-start/center as you prefer */
+    flex-wrap: wrap;
+    /* Let items wrap to new line */
+    justify-content: space-between;
+    /* Spread them out, or flex-start/center as you prefer */
     width: 88%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
+}
 
 /* Make each item a flex column so quantity is at bottom. 
    Use ~32% so you can fit 3 items across on large screens. */
@@ -145,7 +163,8 @@ nav ul li a:hover {
     justify-content: space-between;
     text-align: center;
     width: 32%;
-    margin-bottom: 30px; /* spacing if row wraps */
+    margin-bottom: 30px;
+    /* spacing if row wraps */
 }
 
 .item img {
@@ -171,7 +190,7 @@ nav ul li a:hover {
     font-size: 1em;
     color: #666;
     margin: 0;
-    white-space: normal;    
+    white-space: normal;
 }
 
 .scroll-top {
@@ -187,23 +206,29 @@ nav ul li a:hover {
     line-height: 50px;
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Masquer la bulle au départ */
-    z-index: 1000; /* S'assurer que l'élément est au-dessus des autres */
-    transition: opacity 0.3s ease-in-out; /* Animation d'apparition/disparition */
+    display: none;
+    /* Masquer la bulle au départ */
+    z-index: 1000;
+    /* S'assurer que l'élément est au-dessus des autres */
+    transition: opacity 0.3s ease-in-out;
+    /* Animation d'apparition/disparition */
 }
 
 .scroll-top:hover {
-    background-color: #8c7330; /* Change la couleur au survol */
+    background-color: #8c7330;
+    /* Change la couleur au survol */
 }
 
 .quote-button {
     text-align: center;
-    margin: 20px 0; /* Add some spacing */
+    margin: 20px 0;
+    /* Add some spacing */
 }
 
 .quote-button button {
     padding: 15px 30px;
-    background-color: #28a745; /* Green color */
+    background-color: #28a745;
+    /* Green color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -213,52 +238,64 @@ nav ul li a:hover {
 }
 
 .quote-button button:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838;
+    /* Darker green on hover */
 }
 
 .sticky-devis-button {
-    display: none; /* Initially not displayed */
+    display: none;
+    /* Initially not displayed */
     position: fixed;
     top: 20px;
     right: 20px;
     padding: 15px 30px;
-    background-color: #a28834; /* Theme's accent color */
+    background-color: #a28834;
+    /* Theme's accent color */
     color: white;
     border-radius: 5px;
     font-size: 1.2em;
     cursor: pointer;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s, background-color 0.3s;
 }
 
 .sticky-devis-button:hover {
-    background-color: #8c7330; /* Darker shade on hover */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* Larger and darker shadow on hover for more prominence */
+    background-color: #8c7330;
+    /* Darker shade on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    /* Larger and darker shadow on hover for more prominence */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333; /* Dark background color */
-    color: #fff; /* White text for contrast */
-    border-top: 1px solid #444; /* Slightly lighter border for subtle contrast */
+    background-color: #333;
+    /* Dark background color */
+    color: #fff;
+    /* White text for contrast */
+    border-top: 1px solid #444;
+    /* Slightly lighter border for subtle contrast */
     width: 100%;
     margin-top: auto;
 }
 
 footer p {
     margin: 10px 0;
-    font-size: 16px; /* Taille de police confortable */
-    letter-spacing: 1px; /* Espacement léger entre les lettres pour un style raffiné */
+    font-size: 16px;
+    /* Taille de police confortable */
+    letter-spacing: 1px;
+    /* Espacement léger entre les lettres pour un style raffiné */
 }
 
 
 @media (max-width: 992px) {
 
     .main-content {
-        flex-direction: column;      /* Stack catalogue & cart vertically */
-        align-items: center;         /* Center them */
+        flex-direction: column;
+        /* Stack catalogue & cart vertically */
+        align-items: center;
+        /* Center them */
     }
 
     .item p {
@@ -269,59 +306,62 @@ footer p {
     }
 
     .item {
-        width: 48%;                 /* 2 columns of items on mid screens */
+        width: 48%;
+        /* 2 columns of items on mid screens */
     }
 
 
     body {
         background: linear-gradient(to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 218, 185, 0.5) 5%,
-          rgba(255, 218, 185, 0.5) 95%,
-          rgba(255, 255, 255, 0) 100%
-        );
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
     }
 
-    .banner{
+    .banner {
         height: 350px;
     }
 
     .catalogue {
-        width: 80%; /* Le catalogue occupe 70% de la largeur disponible */
+        width: 80%;
+        /* Le catalogue occupe 70% de la largeur disponible */
         padding: 20px;
         margin: 0 auto;
     }
-    
+
 }
 
 /* On small screens (phones), 1 item per row */
 @media (max-width: 576px) {
 
     .main-content {
-        flex-direction: column;      /* Stack catalogue & cart vertically */
-        align-items: center;         /* Center them */
+        flex-direction: column;
+        /* Stack catalogue & cart vertically */
+        align-items: center;
+        /* Center them */
     }
 
     .item {
-        width: 100%;                /* 1 item wide */
+        width: 100%;
+        /* 1 item wide */
     }
 
 
-    .item p { 
+    .item p {
         white-space: normal;
         overflow-wrap: break-word;
     }
 
     body {
         background: linear-gradient(to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 218, 185, 0.5) 5%,
-          rgba(255, 218, 185, 0.5) 95%,
-          rgba(255, 255, 255, 0) 100%
-        );
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
     }
 
-    .banner{
+    .banner {
         height: 350px;
     }
 
@@ -331,17 +371,21 @@ footer p {
 
     header {
         justify-content: flex-start;
-        padding: 10px 0;  /* minimal left/right padding */
+        padding: 10px 0;
+        /* minimal left/right padding */
     }
 
     nav ul {
-        flex-wrap: wrap;     /* ADJUSTED: now it wraps onto next line if needed */
-        gap: 10px;             /* keep or adjust spacing */
+        flex-wrap: wrap;
+        /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;
+        /* keep or adjust spacing */
         justify-content: flex-start;
     }
-    
+
     nav {
-        margin-left: 10px;   /* Space between logo and menu if needed */
+        margin-left: 10px;
+        /* Space between logo and menu if needed */
     }
 
     .sticky-devis-button {
@@ -350,11 +394,10 @@ footer p {
     }
 
     .catalogue {
-        width: 80%; /* Le catalogue occupe 70% de la largeur disponible */
+        width: 80%;
+        /* Le catalogue occupe 70% de la largeur disponible */
         padding: 20px;
         margin: 0 auto;
     }
-        
+
 }
-
-

@@ -23,7 +23,9 @@ header {
     padding: 10px 20px;
     position: relative;
     background-color: rgba(255, 255, 255, 0.8);
+    /* Couleur blanche légèrement transparente */
     backdrop-filter: blur(10px);
+    /* Effet de flou pour adoucir la transition */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -34,17 +36,23 @@ body {
     padding: 0;
     color: #333;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95) 0%, rgba(255, 218, 185, 0.8) 20%, rgba(255, 218, 185, 0.7) 100%),
-                linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.6) 10%, rgba(255, 218, 185, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
+        linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.6) 10%, rgba(255, 218, 185, 0.6) 90%, rgba(255, 255, 255, 0) 100%);
     background-color: #fff;
 }
 
-/* Navigation Styles */
-.logo1 img {
+.logo {
+    justify-content: start;
+    margin-right: 20px;
+}
+
+.logo img {
     height: 50px;
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     gap: 20px;
 }
@@ -107,11 +115,13 @@ nav ul li a:hover {
     margin-top: 15px;
     font-size: 1.1em;
     color: #333;
-    background-color: rgba(245, 222, 179, 0.9); /* Couleur plus visible */
+    background-color: rgba(245, 222, 179, 0.9);
+    /* Couleur plus visible */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Alignement du texte à gauche */
+    text-align: left;
+    /* Alignement du texte à gauche */
 }
 
 .contact-details p {
@@ -119,7 +129,8 @@ nav ul li a:hover {
 }
 
 .contact-details a {
-    color: #333; /* Couleur plus claire pour le contraste */
+    color: #333;
+    /* Couleur plus claire pour le contraste */
     text-decoration: none;
 }
 
@@ -134,7 +145,8 @@ nav ul li a:hover {
     text-align: left;
 }
 
-.contact-info h2, .contact-info h3 {
+.contact-info h2,
+.contact-info h3 {
     font-family: 'PoliceDescription', Arial, sans-serif;
     color: #a28834;
     margin-bottom: 10px;
@@ -171,7 +183,8 @@ nav ul li a:hover {
     margin-top: 15px;
     font-size: 1.1em;
     color: #333;
-    background-color: rgba(245, 222, 179, 0.9); /* Couleur douce */
+    background-color: rgba(245, 222, 179, 0.9);
+    /* Couleur douce */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -184,27 +197,34 @@ nav ul li a:hover {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #a28834; /* Couleur de fond pour correspondre au thème */
+    background-color: #a28834;
+    /* Couleur de fond pour correspondre au thème */
     color: white;
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
     font-size: 30px;
     cursor: pointer;
-    display: none; /* Masqué au départ */
-    z-index: 1000; /* Pour s'assurer que le bouton reste au-dessus des autres éléments */
-    transition: background-color 0.3s ease, opacity 0.3s ease; /* Animation */
+    display: none;
+    /* Masqué au départ */
+    z-index: 1000;
+    /* Pour s'assurer que le bouton reste au-dessus des autres éléments */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    /* Animation */
 }
 
 .scroll-top:hover {
-    background-color: #8c7330; /* Couleur légèrement plus foncée au survol */
+    background-color: #8c7330;
+    /* Couleur légèrement plus foncée au survol */
 }
 
 
 .social-icons {
     display: flex;
-    gap: 15px; /* Espace entre les icônes */
-    margin-top: 10px; /* Espace au-dessus des icônes */
+    gap: 15px;
+    /* Espace entre les icônes */
+    margin-top: 10px;
+    /* Espace au-dessus des icônes */
 }
 
 .social-icons a img {
@@ -212,7 +232,8 @@ nav ul li a:hover {
 }
 
 .social-icons a img:hover {
-    transform: scale(1.2); /* Effet de zoom au survol */
+    transform: scale(1.2);
+    /* Effet de zoom au survol */
 }
 
 
@@ -233,6 +254,34 @@ footer p {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+    /*-----------------MENU Principal----------------------------------------------------------------------------------------*/
+
+    .logo {
+        margin: 0;
+    }
+
+    header {
+        justify-content: flex-start;
+        padding: 10px 0;
+        /* minimal left/right padding */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;
+        /* keep or adjust spacing */
+        justify-content: flex-start;
+    }
+
+    nav {
+        margin-left: 10px;
+        /* Space between logo and menu if needed */
+    }
+
+    /*------------------------------------------------------------------------------------------------------------------------*/
+
     .contact-content {
         flex-direction: column;
         align-items: center;
@@ -247,7 +296,9 @@ footer p {
         font-size: 2.5em;
     }
 
-    .contact-info h2, .contact-info h3 {
+    .contact-info h2,
+    .contact-info h3 {
         font-size: 1.5em;
     }
+
 }
