@@ -129,7 +129,7 @@ nav ul li a:hover {
 .item-row {
     display: flex;
     flex-wrap: wrap;          /* allow wrapping for responsiveness */
-    justify-content: space-between;
+    gap: 2%; 
     align-items: stretch;
     margin-bottom: 20px;
 }
@@ -158,15 +158,13 @@ nav ul li a:hover {
     font-size: 1.2em;
     color: #333;
     white-space: normal;
-    overflow-wrap: break-word;
 }
 
 .item p {
     font-size: 1em;
     color: #666;
     margin: 0;
-    white-space: normal;
-    overflow-wrap: break-word;
+    white-space: normal;    
 }
 
 /* Quantity and PDF buttons */
