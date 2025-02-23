@@ -123,13 +123,13 @@ nav ul li a:hover {
 
 .catalogue {
     width: 70%;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .item-row {
     display: flex;
     flex-wrap: wrap;          /* allow wrapping for responsiveness */
-    gap: 2%; 
+    justify-content: space-between;
     align-items: stretch;
     margin-bottom: 20px;
 }
