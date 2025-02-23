@@ -128,18 +128,14 @@ nav ul li a:hover {
 }
 
 .catalogue {
-    width: 88%; /* Le catalogue occupe 70% de la largeur disponible */
-    padding: 20px;
-    margin: 0 auto;
-}
-
-.item-row {
     display: flex;
-    flex-wrap: wrap;          /* allow wrapping for responsiveness */
-    justify-content: space-between;
-    align-items: stretch;
-    margin-bottom: 20px;
-}
+    flex-wrap: wrap;          /* Let items wrap to new line */
+    justify-content: space-between; /* Spread them out, or flex-start/center as you prefer */
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
 /* Make each item a flex column so quantity is at bottom. 
    Use ~32% so you can fit 3 items across on large screens. */
@@ -149,7 +145,7 @@ nav ul li a:hover {
     justify-content: space-between;
     text-align: center;
     width: 32%;
-    margin-bottom: 20px; /* spacing if row wraps */
+    margin-bottom: 30px; /* spacing if row wraps */
 }
 
 .item img {
@@ -259,11 +255,11 @@ footer p {
 
 
 @media (max-width: 992px) {
+
     .main-content {
         flex-direction: column;      /* Stack catalogue & cart vertically */
         align-items: center;         /* Center them */
     }
-
 
     .item p {
         /* Let lines break normally */
@@ -285,6 +281,17 @@ footer p {
           rgba(255, 255, 255, 0) 100%
         );
     }
+
+    .banner{
+        height: 350px;
+    }
+
+    .catalogue {
+        width: 80%; /* Le catalogue occupe 70% de la largeur disponible */
+        padding: 20px;
+        margin: 0 auto;
+    }
+    
 }
 
 /* On small screens (phones), 1 item per row */

@@ -104,20 +104,15 @@ nav ul li a:hover {
 }
 
 .catalogue {
-    width: 70%;
-    padding: 20px 0;
-}
-
-.item-row {
     display: flex;
-    flex-wrap: wrap;          /* allow wrapping for responsiveness */
-    justify-content: space-between;
-    align-items: stretch;
-    margin-bottom: 20px;
-}
+    flex-wrap: wrap;          /* Let items wrap to new line */
+    justify-content: space-between; /* Spread them out, or flex-start/center as you prefer */
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
-/* Make each item a flex column so quantity is at bottom. 
-   Use ~32% so you can fit 3 items across on large screens. */
 .item {
     display: flex;
     flex-direction: column;
@@ -311,22 +306,29 @@ footer p {
         align-items: center;         /* Center them */
     }
 
+    .item {
+        width: 48%;                /* 1 item wide */
+    }
+
     .catalogue, .cart {
         width: 100%;                /* Full width each when stacked */
         margin: 0 0 20px 0;         /* Spacing between sections */
     }
 
-    .item p, .cart p, .cart ul {
-        /* Let lines break normally */
+    .cart {
+        width: 90%;
+        margin: 0 0 20px 0;
+    }
+
+    .catalogue{
+        width: 80%;
+        margin: 0 0 20px 0;
+    }
+
+    .item p, .cart p, .cart ul { 
         white-space: normal;
-        /* Force wrapping if there's a super-long word */
         overflow-wrap: break-word;
     }
-
-    .item {
-        width: 48%;                 /* 2 columns of items on mid screens */
-    }
-
 
     body {
         background: linear-gradient(to right,
@@ -335,6 +337,10 @@ footer p {
           rgba(255, 218, 185, 0.5) 95%,
           rgba(255, 255, 255, 0) 100%
         );
+    }
+
+    .banner{
+        height: 350px;
     }
 }
 
