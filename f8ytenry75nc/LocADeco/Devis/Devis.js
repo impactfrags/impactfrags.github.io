@@ -58,34 +58,47 @@ function displayCart() {
 function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
+    
+    doc.addImage('https://www.portfoliomeryet.top/f8ytenry75nc/LocADeco/image/Accueil/Logo.png', 'PNG', 10, 10, 40, 0);
 
-    // Titre du devis
     doc.setFontSize(18);
-    doc.text("Devis - Loc A Déco", 10, 10);
+    doc.text('Devis - Loc A Déco', 10, 50);
 
-    // Ajouter une ligne vide
+    // 4) Subtitle for items
     doc.setFontSize(12);
-    doc.text("Articles dans le panier :", 10, 20);
+    doc.text('Articles dans le panier :', 10, 60);
 
-    let y = 30; // Position verticale initiale
+    let y = 70; // Starting vertical position for listing items
     let total = 0;
 
-    // Ajouter les articles du panier au PDF
+    // 5) Add the cart items
     for (let articleId in cart) {
         const article = cart[articleId];
-        doc.text(`${article.name} - ${article.quantity} x ${article.price}€ = ${article.quantity * article.price}€`, 10, y);
+        doc.text(
+          `${article.name} - ${article.quantity} x ${article.price}€ = ` +
+          `${(article.quantity * article.price).toFixed(2)}€`,
+          10,
+          y
+        );
         y += 10;
         total += article.quantity * article.price;
     }
 
-    // Ajouter le total
+    // 6) Add total
     y += 10;
     doc.setFontSize(14);
-    doc.text(`Total: ${total}€`, 10, y);
+    doc.text(`Total: ${total.toFixed(2)}€`, 10, y);
 
-    // Télécharger le PDF
-    doc.save("devis_loc_a_deco.pdf");
+    // 7) Place phone & email at the bottom of the page
+    doc.setFontSize(12);
+    doc.text('Jérôme CARRET : 06-85-05-15-08', 125, 17);
+    doc.text('Stéphanie CARRET : 06-81-47-25-73', 125, 24);
+    doc.text('Email : Loc-a-deco@hotmail.com', 125, 31);
+
+    // 8) Download the PDF
+    doc.save('devis_loc_a_deco.pdf');
 }
+
 
 // Associer la fonction generatePDF au bouton Créer le PDF
 document.getElementById('create-pdf').addEventListener('click', generatePDF);

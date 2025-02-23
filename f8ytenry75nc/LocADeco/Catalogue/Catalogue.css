@@ -65,11 +65,12 @@ nav ul li a:hover {
 
 .main-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto; 
+    padding: 20px 0;
+    margin: 0 auto;
+    position: relative;
 }
 
 .center-container {
@@ -81,23 +82,31 @@ nav ul li a:hover {
 }
 
 .banner {
-    background-image: url('../image/Catalogue/banner.webp');
+    background-image: url('../image/Catalogue/Banner.png');
     background-size: cover;
     background-position: center;
-    padding: 100px 20px;
     color: white;
     text-align: center;
     width: 100%;
     position: relative;
+
+    height: 400px; /* Choisis la même hauteur que sur PC */
+    
+    /* Permet de centrer le texte verticalement dans la bannière */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-text {
+    width: 85%;
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
-    position: relative; /* Ensure the button can be positioned relatively to this block */
-    text-align: center; /* Center the text and button within */
+    position: relative;
+    text-align: center;
+    
 }
 
 .devis-button {
@@ -119,20 +128,28 @@ nav ul li a:hover {
 }
 
 .catalogue {
-    width: 70%; /* Le catalogue occupe 70% de la largeur disponible */
+    width: 88%; /* Le catalogue occupe 70% de la largeur disponible */
     padding: 20px;
     margin: 0 auto;
 }
 
 .item-row {
     display: flex;
+    flex-wrap: wrap;          /* allow wrapping for responsiveness */
     justify-content: space-between;
-    margin-bottom: 20px; /* Espace entre les lignes d'articles */
+    align-items: stretch;
+    margin-bottom: 20px;
 }
 
+/* Make each item a flex column so quantity is at bottom. 
+   Use ~32% so you can fit 3 items across on large screens. */
 .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
-    width: 32%; /* Chaque article prend environ un tiers de la largeur avec un espace */
+    width: 32%;
+    margin-bottom: 20px; /* spacing if row wraps */
 }
 
 .item img {
@@ -141,41 +158,24 @@ nav ul li a:hover {
     border-radius: 15px;
     object-fit: contain;
     background-color: #fff;
-}
 
-.item .image-container {
-    width: 100%; /* Full width of the item */
-    aspect-ratio: 3 / 2; /* Maintain a fixed ratio, e.g., 3:2 */
-    overflow: hidden; /* Ensure overflow is hidden for images that are larger */
-    border-radius: 15px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .item h3 {
     margin: 10px 0 5px;
     font-size: 1.2em;
     color: #333;
+    white-space: normal;
 }
 
 .item p {
     font-size: 1em;
     color: #666;
     margin: 0;
-}
-
-.item button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.item button:hover {
-    background-color: #0056b3;
+    white-space: normal;    
 }
 
 .scroll-top {
@@ -255,6 +255,99 @@ footer p {
     margin: 10px 0;
     font-size: 16px; /* Taille de police confortable */
     letter-spacing: 1px; /* Espacement léger entre les lettres pour un style raffiné */
+}
+
+
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;      /* Stack catalogue & cart vertically */
+        align-items: center;         /* Center them */
+    }
+
+
+    .item p {
+        /* Let lines break normally */
+        white-space: normal;
+        /* Force wrapping if there's a super-long word */
+        overflow-wrap: break-word;
+    }
+
+    .item {
+        width: 48%;                 /* 2 columns of items on mid screens */
+    }
+
+
+    body {
+        background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 218, 185, 0.5) 5%,
+          rgba(255, 218, 185, 0.5) 95%,
+          rgba(255, 255, 255, 0) 100%
+        );
+    }
+}
+
+/* On small screens (phones), 1 item per row */
+@media (max-width: 576px) {
+
+    .main-content {
+        flex-direction: column;      /* Stack catalogue & cart vertically */
+        align-items: center;         /* Center them */
+    }
+
+    .item {
+        width: 100%;                /* 1 item wide */
+    }
+
+
+    .item p { 
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    body {
+        background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 218, 185, 0.5) 5%,
+          rgba(255, 218, 185, 0.5) 95%,
+          rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    .banner{
+        height: 350px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    header {
+        justify-content: flex-start;
+        padding: 10px 0;  /* minimal left/right padding */
+    }
+
+    nav ul {
+        flex-wrap: wrap;     /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;             /* keep or adjust spacing */
+        justify-content: flex-start;
+    }
+    
+    nav {
+        margin-left: 10px;   /* Space between logo and menu if needed */
+    }
+
+    .sticky-devis-button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    .catalogue {
+        width: 80%; /* Le catalogue occupe 70% de la largeur disponible */
+        padding: 20px;
+        margin: 0 auto;
+    }
+        
 }
 
 

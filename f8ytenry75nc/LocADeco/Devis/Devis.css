@@ -66,7 +66,7 @@ nav ul li a:hover {
 }
 
 .banner {
-    background-image: url('../image/Catalogue/banner.webp');
+    background-image: url('../image/Catalogue/Banner.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -83,30 +83,13 @@ nav ul li a:hover {
 }
 
 .banner-text {
+    width: 85%;
     background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
     position: relative;
     text-align: center;
-}
-
-.devis-button {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #333;
-    border: 2px solid #a28834;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-.devis-button:hover {
-    background-color: #a28834;
-    color: white;
 }
 
 /* Main Content Layout */
@@ -237,6 +220,7 @@ nav ul li a:hover {
     max-height: 80vh;
     overflow-y: auto;
     box-sizing: border-box;
+    gap: 50px;
 }
 
 .cart h2{
@@ -366,8 +350,13 @@ footer p {
         width: 100%;                /* 1 item wide */
     }
 
-    .catalogue, .cart {
+    .cart {
         width: 90%;
+        margin: 0 0 20px 0;
+    }
+
+    .catalogue{
+        width: 80%;
         margin: 0 0 20px 0;
     }
 
@@ -384,4 +373,28 @@ footer p {
           rgba(255, 255, 255, 0) 100%
         );
     }
+
+    .banner{
+        height: 350px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    header {
+        justify-content: flex-start;
+        padding: 10px 0;  /* minimal left/right padding */
+    }
+
+    nav ul {
+        flex-wrap: wrap;     /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;             /* keep or adjust spacing */
+        justify-content: flex-start;
+    }
+    
+    nav {
+        margin-left: 10px;   /* Space between logo and menu if needed */
+    }
+        
 }
