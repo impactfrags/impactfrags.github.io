@@ -158,6 +158,7 @@ nav ul li a:hover {
     font-size: 1.2em;
     color: #333;
     white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .item p {
@@ -165,6 +166,7 @@ nav ul li a:hover {
     color: #666;
     margin: 0;
     white-space: normal;
+    overflow-wrap: break-word;
 }
 
 /* Quantity and PDF buttons */
