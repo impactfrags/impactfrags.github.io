@@ -74,7 +74,6 @@ nav ul li a:hover {
     width: 100%;
     position: relative;
 
-    /* On remplace "padding: 100px 20px" par une hauteur fixe */
     height: 400px; /* Choisis la même hauteur que sur PC */
     
     /* Permet de centrer le texte verticalement dans la bannière */
@@ -199,9 +198,10 @@ nav ul li a:hover {
 }
 
 .createpdf {
-    width: 100%;
+    width: 90%;
     text-align: center;
     margin-top: 20px;
+    margin-left: 5%;
     font-weight: bold;
 }
 
@@ -239,6 +239,10 @@ nav ul li a:hover {
     box-sizing: border-box;
 }
 
+.cart h2{
+    text-align: center;
+}
+
 .cart ul {
     list-style: none;
     padding: 0;
@@ -247,12 +251,14 @@ nav ul li a:hover {
 
 .cart ul li {
     margin-bottom: 10px;
+    margin-left: 5px;
     word-wrap: break-word;
 }
 
 #cart-total {
     font-weight: bold;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .scroll-top {
@@ -326,13 +332,17 @@ footer p {
         margin: 0 0 20px 0;         /* Spacing between sections */
     }
 
+    .item p, .cart p, .cart ul {
+        /* Let lines break normally */
+        white-space: normal;
+        /* Force wrapping if there's a super-long word */
+        overflow-wrap: break-word;
+    }
+
     .item {
         width: 48%;                 /* 2 columns of items on mid screens */
     }
 
-    .item img {
-        max-width: 300px;                 /* 2 columns of items on mid screens */
-    }
 
     body {
         background: linear-gradient(to right,
@@ -346,14 +356,26 @@ footer p {
 
 /* On small screens (phones), 1 item per row */
 @media (max-width: 576px) {
+
+    .main-content {
+        flex-direction: column;      /* Stack catalogue & cart vertically */
+        align-items: center;         /* Center them */
+    }
+
     .item {
         width: 100%;                /* 1 item wide */
     }
 
-    .item img {
-        max-width: 300px;                 /* 2 columns of items on mid screens */
+    .catalogue, .cart {
+        width: 90%;
+        margin: 0 0 20px 0;
     }
-    
+
+    .item p, .cart p, .cart ul { 
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
     body {
         background: linear-gradient(to right,
           rgba(255, 255, 255, 0) 0%,
