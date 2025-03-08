@@ -1,4 +1,6 @@
-/* Font Faces */
+/* ---------------------------------------------------------------------------------
+   Polices et règles générales
+---------------------------------------------------------------------------------- */
 @font-face {
     font-family: 'PoliceMariage';
     src: url('../formal-script.bold.otf') format('opentype');
@@ -15,7 +17,6 @@
     font-display: swap;
 }
 
-/* Global Styles */
 body {
     font-family: 'PoliceDescription', sans-serif;
     margin: 0;
@@ -27,22 +28,21 @@ body {
     /* Fond blanc par défaut */
 }
 
-/* Header and Navigation */
+/* ---------------------------------------------------------------------------------
+   Header et Navigation
+---------------------------------------------------------------------------------- */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.8);
-    /* Couleur blanche légèrement transparente */
     backdrop-filter: blur(10px);
-    /* Effet de flou */
     transition: background-color 0.3s ease-in-out;
 }
 
 header.scrolled {
     background-color: rgba(255, 255, 255, 0.8);
-    /* Couleur du menu lors du défilement */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -70,19 +70,31 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Galerie Section */
+body h2 {
+    margin-left: 10%;
+}
+
+.separator-bar {
+    width: 80%;
+    height: 4px;
+    background-color: #a28834;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------------------------------
+   Section Galerie (première partie)
+   -> 4 images en grille, comme votre mise en page d'origine
+---------------------------------------------------------------------------------- */
 .galerie {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f6e5e4;
-    /* Même couleur douce que sur la page d'accueil */
+    padding: 5%;
 }
 
 .galerie h1 {
     font-family: 'PoliceMariage', Arial, sans-serif;
     font-size: 3em;
     color: #a28834;
-    /* Couleur assortie au style du site */
     margin-bottom: 20px;
 }
 
@@ -93,66 +105,160 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
-/* Grille d'images */
+/* Conteneur global pour la grille */
+.image-grid-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* Ajustement des colonnes selon la taille de l'écran */
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
-.image-container {
+.image-grid .image-container {
+    width: 24%;
+    height: 300px;
     position: relative;
-    overflow: hidden;
     border-radius: 15px;
-    aspect-ratio: 1 / 1;
-    /* Propriété pour forcer un ratio carré */
+    overflow: hidden;
 }
 
-.image-container img {
+.image-grid .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* L'image remplit le conteneur tout en gardant le ratio */
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
-    /* Zoom au survol */
 }
 
-.image-container:hover img {
+/* Zoom au survol */
+.image-grid .image-container:hover img {
     transform: scale(1.1);
-    /* Zoom léger au survol */
 }
 
-.description {
+/* Description en bas de l'image */
+.image-grid .description {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    /* Fond noir transparent */
     color: white;
     padding: 10px;
     text-align: center;
     border-radius: 0 0 15px 15px;
-    font-family: 'PoliceDescription', sans-serif;
     font-size: 1.1em;
 }
 
-.description h3 {
-    margin: 0;
+.PastEvent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Footer */
+.PastEvent .item {
+    width: 23%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.PastEvent .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------------------------------------
+   Media Queries (pour rendre le tout responsive)
+---------------------------------------------------------------------------------- */
+
+@media (max-width: 992px) {
+
+    /* Sur tablette, 2 images par ligne */
+    .image-grid .image-container {
+        width: 48%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .PastEvent .item {
+        width: 48%;
+        height: 250px;
+    }
+
+    body {
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
+    }
+}
+
+@media (max-width: 576px) {
+
+    .image-grid .image-container {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .PastEvent .item {
+        width: 100%;
+        height: 250px;
+    }
+
+    body {
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    header {
+        justify-content: flex-start;
+        padding: 10px 0;
+        /* minimal left/right padding */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;
+        /* keep or adjust spacing */
+        justify-content: flex-start;
+    }
+
+    nav {
+        margin-left: 10px;
+        /* Space between logo and menu if needed */
+    }
+
+}
+
+/* ---------------------------------------------------------------------------------
+   Footer
+---------------------------------------------------------------------------------- */
 footer {
     text-align: center;
     padding: 20px 0;
     background-color: #333;
-    /* Fond sombre pour le pied de page */
     color: #fff;
-    /* Texte blanc pour contraste */
     border-top: 1px solid #444;
-    /* Bordure légèrement plus claire pour subtilité */
     width: 100%;
     margin-top: auto;
 }
@@ -160,7 +266,5 @@ footer {
 footer p {
     margin: 10px 0;
     font-size: 16px;
-    /* Taille de police confortable */
     letter-spacing: 1px;
-    /* Espacement léger pour un style raffiné */
 }
