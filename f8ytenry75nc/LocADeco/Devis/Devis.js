@@ -1,15 +1,19 @@
+//-----------------------------------------------------------------------
+// Panier et Cart
+//-----------------------------------------------------------------------
+
 // Objet pour stocker le contenu du panier
 let cart = {};
 
-// Fonction pour ajuster la quantité et mettre à jour le panier
+// Fonction pour ajuster la quantite et mettre à jour le panier
 function changeQuantity(elementId, change, articleId, articleName, articlePrice) {
     const quantityInput = document.getElementById(elementId);
     let currentQuantity = parseInt(quantityInput.value);
 
-    // Calculer la nouvelle quantité en fonction de l'input utilisateur
+    // Calculer la nouvelle quantite en fonction de l'utilisateur
     let newQuantity = currentQuantity + change;
 
-    // S'assurer que la nouvelle quantité est au moins 0
+    // Nouvelle quantité est au moins 0
     if (newQuantity >= 0) {
         quantityInput.value = newQuantity;
 
@@ -54,7 +58,10 @@ function displayCart() {
     cartTotal.textContent = `Total: ${total}€`;
 }
 
+//-----------------------------------------------------------------------
 // Fonction pour générer un devis au format PDF
+//-----------------------------------------------------------------------
+
 function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();

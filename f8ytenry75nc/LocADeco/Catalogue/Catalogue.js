@@ -1,5 +1,10 @@
+//-----------------------------------------------------------------------
+// Generation du Catalogue en partant du fichier Json : catalogue.json
+//-----------------------------------------------------------------------
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('catalogue.json')
+    fetch('../catalogue.json')
         .then(response => response.json())
         .then(data => {
             const catalogueSection = document.querySelector('.catalogue');
@@ -20,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Erreur lors du chargement du catalogue:', error));
 });
 
+//-----------------------------------------------------------------------
 // Affiche la bulle lorsque l'utilisateur défile vers le bas
+//-----------------------------------------------------------------------
+
 window.addEventListener('scroll', function () {
     const scrollButton = document.getElementById('scrollToTop');
     if (window.scrollY > 200) { // Affiche la bulle après avoir défilé de 200px
@@ -36,7 +44,11 @@ function scrollToTop() {
         behavior: 'smooth' // Ajoute un effet de défilement
     });
 }
-////////////////////////////////////////////////////////////////////////////////////////
+
+//--------------------------------------------------------------------------------
+// Affiche la case "Je fais mon devis" lorsque l'utilisateur défile vers le bas
+//--------------------------------------------------------------------------------
+
 window.addEventListener('DOMContentLoaded', (event) => {
     const stickyDevis = document.getElementById('stickyDevis');
     // Initial settings
@@ -68,7 +80,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         window.location.href = '../Devis/Devis.html';
     });
 });
-////////////////////////////////////////////////////////////////////////////////////////
+
+//-----------------------------------------------------------------------
+// Redirection lors du clique sur le bannerDevisButton
+//-----------------------------------------------------------------------
+
 document.getElementById('bannerDevisButton').addEventListener('click', function () {
     window.location.href = '../Devis/Devis.html'; // rediraction
 });
