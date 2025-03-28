@@ -1,0 +1,432 @@
+/* Font Faces */
+@font-face {
+    font-family: 'PoliceMariage';
+    src: url('../formal-script.bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PoliceDescription';
+    src: url('../Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Global Styles */
+body {
+    /*overflow-x: hidden;*/
+    font-family: PoliceDescription, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 218, 185, 0.5) 20%, rgba(255, 218, 185, 0.5) 80%, rgba(255, 255, 255, 0) 100%);
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a28834;
+    text-decoration: underline;
+}
+
+.banner {
+    background-image: url('../image/Catalogue/Banner.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+    height: 400px;
+    /* Choisis la même hauteur que sur PC */
+
+    /* Permet de centrer le texte verticalement dans la bannière */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text {
+    width: 85%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    /* Let items wrap to new line */
+    justify-content: space-between;
+    /* Spread them out, or flex-start/center as you prefer */
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 32%;
+    margin-bottom: 20px;
+    /* spacing if row wraps */
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: contain;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+    white-space: normal;
+}
+
+.item p {
+    font-size: 1em;
+    color: #666;
+    margin: 0;
+    white-space: normal;
+}
+
+/* Quantity and PDF buttons */
+.quantity-btn,
+.quantity-selector input,
+.createpdf {
+    background-color: rgb(175, 148, 57);
+    color: white;
+    border: 2px solid rgb(175, 148, 57);
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quantity-btn:hover,
+.createpdf:hover {
+    background-color: #9c8332;
+    color: #fff;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 0;
+}
+
+.createpdf {
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.quantity-selector input {
+    width: 60px;
+    text-align: center;
+    border: 2px solid rgb(175, 148, 57);
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(175, 148, 57);
+    color: white;
+}
+
+.quantity-selector input:focus {
+    outline: none;
+}
+
+/* Cart */
+.cart {
+    width: 25%;
+    padding: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    gap: 50px;
+}
+
+.cart h2 {
+    text-align: center;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart ul li {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    word-wrap: break-word;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #a28834;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    /* Masquer la bulle au départ */
+    z-index: 1000;
+    /* S'assurer que l'élément est au-dessus des autres */
+    transition: opacity 0.3s ease-in-out;
+    /* Animation d'apparition/disparition */
+}
+
+.scroll-top:hover {
+    background-color: #8c7330;
+    /* Change la couleur au survol */
+}
+
+/* Remove number input spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    border-top: 1px solid #444;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/*=============================
+   RESPONSIVE BREAKPOINTS
+ =============================*/
+
+/* 
+   3 items per row on large screens (default).
+   On mid‐size screens, let's do 2 items per row, 
+   and stack the cart under the items.
+*/
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+        /* Stack catalogue & cart vertically */
+        align-items: center;
+        /* Center them */
+    }
+
+    .item {
+        width: 48%;
+        /* 1 item wide */
+    }
+
+    .catalogue,
+    .cart {
+        width: 100%;
+        /* Full width each when stacked */
+        margin: 0 0 20px 0;
+        /* Spacing between sections */
+    }
+
+    .cart {
+        width: 90%;
+        margin: 0 0 20px 0;
+    }
+
+    .catalogue {
+        width: 80%;
+        margin: 0 0 20px 0;
+    }
+
+    .item p,
+    .cart p,
+    .cart ul {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    body {
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
+    }
+
+    .banner {
+        height: 350px;
+    }
+}
+
+/* On small screens (phones), 1 item per row */
+@media (max-width: 576px) {
+
+    .main-content {
+        flex-direction: column;
+        /* Stack catalogue & cart vertically */
+        align-items: center;
+        /* Center them */
+    }
+
+    .item {
+        width: 100%;
+        /* 1 item wide */
+    }
+
+    .cart {
+        width: 90%;
+        margin: 0 0 20px 0;
+    }
+
+    .catalogue {
+        width: 80%;
+        margin: 0 0 20px 0;
+    }
+
+    .item p,
+    .cart p,
+    .cart ul {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    body {
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 218, 185, 0.5) 5%,
+                rgba(255, 218, 185, 0.5) 95%,
+                rgba(255, 255, 255, 0) 100%);
+    }
+
+    .banner {
+        height: 350px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    header {
+        justify-content: flex-start;
+        padding: 10px 0;
+        /* minimal left/right padding */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        /* ADJUSTED: now it wraps onto next line if needed */
+        gap: 10px;
+        /* keep or adjust spacing */
+        justify-content: flex-start;
+    }
+
+    nav {
+        margin-left: 10px;
+        /* Space between logo and menu if needed */
+    }
+
+}

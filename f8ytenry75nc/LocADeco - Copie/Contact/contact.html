@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Loc A Déco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../image/Accueil/Logo.png" alt="Logo Loc A Déco">
+        </div>
+        <nav>
+            <ul class="color">
+                <li><a href="../Accueil/Accueil.html">Accueil</a></li>
+                <li><a href="../Catalogue/Catalogue.html">Catalogue</a></li>
+                <li><a href="../Contact/contact.html">Contact</a></li>
+                <li><a href="../Galerie/Galerie.html">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="scrollToTop" class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const scrollButton = document.getElementById('scrollToTop');
+            if (window.scrollY > 200) {
+                scrollButton.style.display = 'block';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <section class="contact-section">
+        <div class="contact-header">
+            <h1>Loc A Deco</h1>
+            <p>Nous sommes à votre écoute pour vous aider dans l'organisation de vos évènements.</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-image">
+                <img src="../image/Accueil/14835.png" alt="Les propriétaires de Loc A Déco">
+                <div class="contact-details">
+                    <p><strong>Jérôme CARRET :</strong> 06-85-05-15-08</p>
+                    <p><strong>Stéphanie CARRET :</strong> 06-81-47-25-73</p>
+                    <p><strong>Email :</strong> <a href="mailto:Loc-a-deco@hotmail.com">Loc-a-deco@hotmail.com</a></p>
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-info">
+                <h2>Savoir Faire</h2>
+                <p>Nous sommes une équipe de professionnels passionnés avec des années d’expériences dans
+                    l’évènementiel.</p>
+                <p>Nous proposons une gamme de services pour répondre à tous vos besoins lors de vos évènements :
+                    location de tables, chaises, mange debout, linge, divers éléments de décorations, etc.</p>
+                <p>Nous mettons tout en œuvre pour vous trouver une solution à votre demande et nous vous accompagnons
+                    pour toutes vos manifestations : mariage, anniversaire, baby shower, un repas en famille ou entre
+                    amis, tout ce qui peut vous aider à organiser et décorer votre évènement…</p>
+
+                <h2>Qui Sommes-Nous ?</h2>
+                <p>L’entreprise LOC A DECO est créée depuis juin 2017 par Jérôme et Stéphanie CARRET et est située à
+                    Saint Georges Sur Loire dans le Maine &amp; Loire 49.</p>
+                <p>Nous sommes une entreprise spécialisée dans l’évènementiel. Nous vous accompagnons quelque soit
+                    l’évènement et son envergure. Nous pouvons vous apporter un service de location avec des produits de
+                    qualité, tables, chaises, mange-debout, arches, objets de décoration, etc... et également des
+                    conseils en préparations et décorations. Nous pouvons aussi créer et mettre en place votre
+                    manifestation.</p>
+
+                <h2>Que Pouvons-Nous Vous Apporter ?</h2>
+                <h3>1 – La Location</h3>
+                <p>Nous louons du mobilier et matériel pour vos manifestations : tables, chaises, mange-debout, candy
+                    bar, linge de tables, vases, accessoires de décoration. Location à la journée ou pour plusieurs
+                    jours.</p>
+
+                <h3>2 – Le Conseil</h3>
+                <p>Nous pouvons vous apporter des conseils sur la réalisation de votre évènement, que ce soit dans son
+                    organisation ou sa décoration. Nous pouvons aussi être présents lors de votre journée afin de
+                    pallier à son bon déroulement.</p>
+
+                <h3>3 – La Décoration</h3>
+                <p>Forts de nos diverses expériences, nous pouvons créer une ambiance, un décor selon vos envies et
+                    votre budget. Nous concevons et mettons en place. Nous nous adaptons selon votre demande et vos
+                    besoins.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Loc A Déco. Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>

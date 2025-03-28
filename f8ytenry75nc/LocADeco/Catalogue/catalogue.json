@@ -1,0 +1,84 @@
+[
+    {
+        "image": "chaise-blanche-en-resine.jpg",
+        "titre": "Chaise Miami",
+        "prix": "1,10€",
+        "description": "chaises empilables"
+    },
+    {
+        "image": "Housse chaise resine.png",
+        "titre": "Housse Blanche",
+        "prix": "1€"
+    },
+    {
+        "image": "Lot chaise resine et housse.png",
+        "titre": "Lot Chaise Miami et Housse blanche",
+        "prix": "2€"
+    },
+    {
+        "image": "Mange debout.png",
+        "titre": "Manges-debout",
+        "prix": "7€",
+        "description": "Pliable, Diamètre du plateau 80cm Hauteur 1,10m"
+    },
+    {
+        "image": "Housse mange debout.png",
+        "titre": "Housse blanche ou noire pour Manges-debout",
+        "prix": "4€"
+    },
+    {
+        "image": "Lot mange debout et housse.png",
+        "titre": "Lot Manges-debout et Housse blanche/noire",
+        "prix": "10€"
+    },
+    {
+        "image": "Table rectangulaire.png",
+        "titre": "Table rectangulaire",
+        "prix": "7€",
+        "description": "Table pliable, H 74,5cm L 1,89cm l 75cm"
+    },
+    {
+        "image": "Nappe tissu table rectangulaire.png",
+        "titre": "Nappe blanche en tissu",
+        "prix": "15€"
+    },
+    {
+        "image": "Lot table rectangulaire et nappe tissu.png",
+        "titre": "Lot Table rectangulaire et nappe blanche en tissu",
+        "prix": "20€"
+    },
+    {
+        "image": "Table ronde.png",
+        "titre": "Table ronde",
+        "prix": "11€",
+        "description": "Table pliable, H74,5 cm diamètre 1,78m"
+    },
+    {
+        "image": "Nappe tissu table ronde.png",
+        "titre": "Nappe blanche en tissu",
+        "prix": "25€"
+    },
+    {
+        "image": "Lot table ronde et nappe tissu.png",
+        "titre": "Lot Table ronde et nappe blanche en tissu",
+        "prix": "30€"
+    },
+    {
+        "image": "CandyBar.png",
+        "titre": "Candy bar en bois",
+        "prix": "70€",
+        "description": "Avec pots en verres et accessoires bonbons"
+    },
+    {
+        "image": "Arche oval or.png",
+        "titre": "Arche oval or",
+        "prix": "30€",
+        "description": "Démontable, 3m de diamètre, sur pied"
+    },
+    {
+        "image": "Arche rectangulaire.png",
+        "titre": "Arche rectangulaire",
+        "prix": "40€",
+        "description": "Hauteur 3m, Longueur 3m ou 6m, peut-être diviser en 2"
+    }
+]
