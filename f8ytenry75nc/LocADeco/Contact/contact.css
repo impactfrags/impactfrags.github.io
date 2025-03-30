@@ -170,27 +170,6 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* Separator Bar */
-.separator-bar {
-    width: 60%;
-    height: 5px;
-    background-color: #a28834;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
-.contact-details {
-    margin-top: 15px;
-    font-size: 1.1em;
-    color: #333;
-    background-color: rgba(245, 222, 179, 0.9);
-    /* Couleur douce */
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
 .scroll-top {
     position: fixed;
     bottom: 20px;

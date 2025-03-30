@@ -109,3 +109,25 @@ function generatePDF() {
 
 // Associer la fonction generatePDF au bouton Créer le PDF
 document.getElementById('create-pdf').addEventListener('click', generatePDF);
+
+//-----------------------------------------------------------------------
+// Affiche la bulle lorsque l'utilisateur défile vers le bas
+//-----------------------------------------------------------------------
+
+// Affiche la bulle lorsque l'utilisateur défile vers le bas
+window.addEventListener('scroll', function () {
+    const scrollButton = document.getElementById('scrollToTop');
+    if (window.scrollY > 200) { // Affiche la bulle après avoir défilé de 200px
+        scrollButton.style.display = 'block';
+    } else {
+        scrollButton.style.display = 'none';
+    }
+});
+
+// Redirection Devis.html
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Ajoute un effet de défilement fluide
+    });
+}

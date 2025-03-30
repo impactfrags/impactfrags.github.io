@@ -48,26 +48,6 @@
 
     <div id="scrollToTop" class="scroll-top" onclick="scrollToTop()">↑</div>
 
-    <script>
-        // Affiche la bulle lorsque l'utilisateur défile vers le bas
-        window.addEventListener('scroll', function () {
-            const scrollButton = document.getElementById('scrollToTop');
-            if (window.scrollY > 200) { // Affiche la bulle après avoir défilé de 200px
-                scrollButton.style.display = 'block';
-            } else {
-                scrollButton.style.display = 'none';
-            }
-        });
-
-        // Redirection Devis.html
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Ajoute un effet de défilement fluide
-            });
-        }
-    </script>
-
     <footer>
         <p>&copy; 2025 Loc A Déco. Tous droits réservés.</p>
     </footer>

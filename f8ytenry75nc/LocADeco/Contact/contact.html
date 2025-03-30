@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Loc A Déco</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <img src="../image/Accueil/Logo.png" alt="Logo Loc A Déco">
         </div>
         <nav>
-            <ul class="color">
+            <ul>
                 <li><a href="../Accueil/Accueil.html">Accueil</a></li>
                 <li><a href="../Catalogue/Catalogue.html">Catalogue</a></li>
                 <li><a href="../Contact/contact.html">Contact</a></li>
@@ -22,12 +22,16 @@
             </ul>
         </nav>
     </header>
+
     <div id="scrollToTop" class="scroll-top" onclick="scrollToTop()">↑</div>
 
     <script>
+    //-----------------------------------------------------------------------
+    // Affiche la bulle lorsque l'utilisateur défile vers le bas
+    //-----------------------------------------------------------------------
         window.addEventListener('scroll', function () {
             const scrollButton = document.getElementById('scrollToTop');
-            if (window.scrollY > 200) {
+            if (window.scrollY > 200) { // Affiche la bulle après avoir défilé de 200px
                 scrollButton.style.display = 'block';
             } else {
                 scrollButton.style.display = 'none';
@@ -36,7 +40,7 @@
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: 'smooth' // Ajoute un effet de défilement
             });
         }
     </script>
@@ -49,7 +53,7 @@
 
         <div class="contact-content">
             <div class="contact-image">
-                <img src="../image/Accueil/14835.png" alt="Les propriétaires de Loc A Déco">
+                <img src="../image/Accueil/Contact.png" alt="Les propriétaires de Loc A Déco">
                 <div class="contact-details">
                     <p><strong>Jérôme CARRET :</strong> 06-85-05-15-08</p>
                     <p><strong>Stéphanie CARRET :</strong> 06-81-47-25-73</p>

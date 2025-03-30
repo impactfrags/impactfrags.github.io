@@ -219,29 +219,6 @@ nav ul li a:hover {
     /* Change la couleur au survol */
 }
 
-.quote-button {
-    text-align: center;
-    margin: 20px 0;
-    /* Add some spacing */
-}
-
-.quote-button button {
-    padding: 15px 30px;
-    background-color: #28a745;
-    /* Green color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.quote-button button:hover {
-    background-color: #218838;
-    /* Darker green on hover */
-}
-
 .sticky-devis-button {
     display: none;
     /* Initially not displayed */
